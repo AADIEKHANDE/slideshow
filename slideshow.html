@@ -26,14 +26,14 @@
             font-weight: bold;
         }
         .box2{
-            width: 80%;
+            width: 100%;
             height: 300px;
             float: left;
             background-color: rgb(19, 18, 18);
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-0%);
+            transform: translate(-50%,-10%);
         }
         .menubar{
             height: 6vh;
@@ -47,17 +47,17 @@
             text-decoration: none;
             list-style: none;
             display: inline;
-            padding: 10px 20px 10px 20px ;
+            padding: 20px 20px 20px 20px ;
             color: rgb(160, 155, 155);
             position: relative;
-            top: 1rem;
+            top: 0.6rem;
             user-select: none;
             cursor: pointer;
             font-size: 13px;
             transition: 0.3s ease-in-out;
         }
         .navitem li:hover{
-            background-color: rgba(15,15,15);
+            background-color: rgba(19,18,18);
             color: white;
             font-size: 15px;
             text-shadow: 0 0 14px rgb(255, 255, 255);
@@ -102,38 +102,36 @@
             width: 406px;
             top: 50%;
             left: 50%;
-            transform: translate(-48%,-390%);
+            transform: translate(-50%,-390%);
             font-size: 18px;
             letter-spacing: 4px;
         }
 
         #image{
             position: absolute;
-            left: -50px;
             height: 100%;
+            width: 100%;
         }
 
         #image2{
-            width: 100%;
             height: 100%;
+            width: 100%;
             border-radius: 10px;
         }
 
         #image3{
             position: absolute;
-            right: -50px;
             height: 100%;
-            transition: 1s ease-in-out;
+            width: 100%;
         }
         
         .i1{
             width: 20%;
-            height:70%;
+            height:60%;
             position: relative;
             float: left;
-            top: 3rem;
+            top: 4rem;
             filter: brightness(50%);
-
         }
 
         .i2{
@@ -148,10 +146,10 @@
 
         .i3{
             width: 20%;
-            height:70%;
+            height:60%;
             position: relative;
             float: left;
-            top: 3rem;
+            top: 4rem;
             filter: brightness(50%);
         }
 
@@ -163,6 +161,16 @@
         .opt option{
             background-color: black;
             padding: 5px;
+        }
+
+        .author{
+            color: rgb(175, 175, 174);
+            font-size: 16px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%,90%);
+            font-family: Montserrat;
         }
     </style>
 </head>
@@ -189,7 +197,7 @@
         <p class="logo3" id="logo3">GPA</p>
         <p class="subtitle">Government Polytechnic Ambad</p>
     </div>
-    <div class="box2" onmouseover="iover()">
+    <div class="box2">
         <div class="i1" >
             <img src="a1.JPG" alt="" id="image" >
         </div>
@@ -199,6 +207,7 @@
         <div class="i3">
             <img src="a1.JPG" alt="" id="image3">
         </div>
+        <p class="author" id="author"></p>
     </div>
 </body>
 </html>
@@ -213,6 +222,16 @@
         "https://i.ytimg.com/vi/62LQl9urnT0/maxresdefault.jpg",
         "https://www.drawinghowtodraw.com/stepbystepdrawinglessons/wp-content/uploads/2011/02/400x400-spring-landscape-1280x720.png",
         "https://i.ytimg.com/vi/tw6a3GJ3Z1U/maxresdefault.jpg"];
+    
+    var nm = ["Art by - Aditya Ekhande",
+        "Art by - Krushna Sahane",
+        "Art by - Umar Binmazi",
+        "Art by - Shankar Sabale",
+        "Art by - Vikas Ganjure"
+        ];
+
+alert(employee.emp2.name.n2);
+    
     window.status = "Some text in the status bar!!";
     function slide()
     {
@@ -224,14 +243,11 @@
         k=0;
         image.src=a[i];
         image2.src=a[j];
+        author.innerHTML=nm[i];
         image3.src=a[k];
         i++;
         j++;
         k++;
         var x = setTimeout(slide,3000);
-    }
-    function iover()
-    {
-
     }
 </script>   
